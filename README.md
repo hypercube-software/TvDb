@@ -96,21 +96,21 @@ mvnw clean install
 
 ## Server side
 
-| Topic                                    | Class/Method/File                              | Description                                                  |
-| ---------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| REST Service                             | `TvApi`                                        | How to implement a REST service with CRUD operations. We use various HTTP methods (GET,POST,PUT,DELETE). The serialization of POJO into JSON is automatically done by the API. |
-| JPA Repository                           | `TvDbRepository`                               | How to implement a JPA repository with practically no code.  |
-| QBE API (Query by Example                | `TvApi:search()`                               | How to forge a request without writing SQL.                  |
-| REST Client                              | `TvMaze`                                       | How to use RestTemplate API to consume the API from TvMaze server. |
-| Open API                                 | `OpenApiConfig`                                | How to enable OpenAPI on a REST service to automatically provide a public schema. TvApi uses OpenAPI annotation (`@Operation` or `@Tag`) to add some comments on the public schema. |
-| How to create a DB on startup            | `tvdb-schema.sql` and `application.properties` | Using `spring.datasource.schema` in the SpringBoot configuration, allow us to create the schema we want on startup. |
-| Integrate Webpack build in the final JAR | `pom.xml`                                      | `exec-maven-plugin` will run `npm install` then `npm run build`. `maven-resources-plugin` will copy this build inside `${basedir}/target/classes/static` which is the default web root folder for the microservice. |
-| API/Facade model                         | `com.hypercube.tvdb.api.model.*`               |                                                              |
-| TvMaze model                             | `com.hypercube.tvdb.services.tvmaze.model.*`   |                                                              |
-| DAO model                                |                                                | Since this service is very small, the DAO model is the same than the Facade |
-| H2 Database                              | `application.properties`                       | The database in embed in the JAR. It will create a `./data/` folder to store the TvShows. |
-| Tests                                    | `TvDbApplicationTests`                         | How to use `@SpringBootTest` to automatically run the microservice on a random TCP port and test it. |
-| Log SQL queries                          | `application.properties`                       | `spring.jpa.show-sql=true`  and `spring.jpa.properties.hibernate.format_sql=true` |
+| Topic                                    | Class/Method/File                                  | Description                                                  |
+| ---------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------ |
+| REST Service                             | `TvApi`                                            | How to implement a REST service with CRUD operations. We use various HTTP methods (GET,POST,PUT,DELETE). The serialization of POJO into JSON is automatically done by the API. |
+| JPA Repository                           | `TvDbRepository`                                   | How to implement a JPA repository with practically no code.  |
+| QBE API (Query by Example                | `TvApi:search()`                                   | How to forge a request without writing SQL.                  |
+| REST Client                              | `TvMaze`                                           | How to use RestTemplate API to consume the API from TvMaze server. |
+| Open API                                 | `OpenApiConfig`                                    | How to enable OpenAPI on a REST service to automatically provide a public schema. TvApi uses OpenAPI annotation (`@Operation` or `@Tag`) to add some comments on the public schema. |
+| How to create a DB on startup            | `tvdb-schema.sql` and `application.properties`     | Using `spring.datasource.schema` in the SpringBoot configuration, allow us to create the schema we want on startup. |
+| Integrate Webpack build in the final JAR | `pom.xml`                                          | `exec-maven-plugin` will run `npm install` then `npm run build`. `maven-resources-plugin` will copy this build inside `${basedir}/target/classes/static` which is the default web root folder for the microservice. |
+| API/Facade model                         | `com.hypercube.tvdb.api.model.*`                   |                                                              |
+| TvMaze model                             | `com.hypercube.tvdb.<br />services.tvmaze.model.*` |                                                              |
+| DAO model                                |                                                    | Since this service is very small, the DAO model is the same than the Facade |
+| H2 Database                              | `application.properties`                           | The database in embed in the JAR. It will create a `./data/` folder to store the TvShows. |
+| Tests                                    | `TvDbApplicationTests`                             | How to use `@SpringBootTest` to automatically run the microservice on a random TCP port and test it. |
+| Log SQL queries                          | `application.properties`                           | `spring.jpa.show-sql=true`  and `spring.jpa.properties.hibernate.format_sql=true` |
 
 ## Client side
 
