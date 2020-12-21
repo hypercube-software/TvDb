@@ -21,7 +21,12 @@ In "web Search" click on the "+" button to add a TvShow to your local database. 
 TvDb is a microservice written in the following frameworks:
 
 - **Backend** is written with **SpringBoot**
-- **FrontEnd** is written in **TypeScfript** with **ReactJs** and **RxJs**
+- **FrontEnd** is written in **TypeScript** with **ReactJs** and **RxJs**
+
+Folders:
+
+- `./src/main/java` contains the server-side code
+- `./src/main/react` contains the client-side code
 
 ## Web Entry points
 
@@ -45,7 +50,7 @@ http://localhost:8080/api/tv
 
 ## How to build?
 
-You can use the **mvnw** command provided by Spring boot, it will automatically download maven for you. Or open the project in Eclipse.
+You can use the **mvnw** command provided by Spring boot or open the project in Eclipse. This will also test the server-side.
 
 ```bash
 mvnw clean install
@@ -59,6 +64,8 @@ Using **mvnw** (this also rebuild the gui)
 mvnw spring-boot:run
 ```
 
+Note: `spring-boot:run` does not run the tests.
+
 Using directly **java**:
 
 ```
@@ -67,6 +74,8 @@ C:\Java\jdk-11.0.2\bin\java -jar target\TvDB-0.0.1-SNAPSHOT.jar
 
 ## How to test
 
+### Test the client-side
+
 Testing the front end occur in folder `./src/main/react/`
 
 ```
@@ -74,6 +83,14 @@ npm test
 ```
 
 Since those tests contains integration tests (calls to the REST service), you are supposed to run it once the JAR is started. This can be done easily in Jenkins for instance...
+
+### Test the server-side
+
+This is done during the maven compilation
+
+```
+mvnw clean install
+```
 
 # Points of interest
 
