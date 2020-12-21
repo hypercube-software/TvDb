@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmDialog tests Render Error Dialog 1`] = `
+<WithStyles(ForwardRef(Dialog))
+  open={true}
+>
+  <WithStyles(ForwardRef(DialogTitle))>
+    Error
+  </WithStyles(ForwardRef(DialogTitle))>
+  <WithStyles(ForwardRef(DialogContent))
+    className="dialogContent"
+    dividers={true}
+  >
+    <img
+      className="icon"
+      src="icons/remove-svgrepo-com.svg"
+    />
+    <p
+      className="message"
+    >
+      The content
+    </p>
+  </WithStyles(ForwardRef(DialogContent))>
+  <WithStyles(ForwardRef(DialogActions))>
+    <WithStyles(ForwardRef(Button))
+      color="secondary"
+      onClick={[Function]}
+    >
+      Ok
+    </WithStyles(ForwardRef(Button))>
+  </WithStyles(ForwardRef(DialogActions))>
+</WithStyles(ForwardRef(Dialog))>
+`;

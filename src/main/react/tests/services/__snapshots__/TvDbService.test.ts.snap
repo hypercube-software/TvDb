@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TvDbService tests can do an external search 1`] = `
+Array [
+  Object {
+    "artwork": "http://static.tvmaze.com/uploads/images/original_untouched/6/17013.jpg",
+    "id": null,
+    "name": "The A-Team",
+    "summary": "<p><b>The A-Team</b> is an American action-adventure television series, running from 1983 to 1987, about a fictional group of ex–United States Army Special Forces.</p>",
+    "thumbnail": "http://static.tvmaze.com/uploads/images/medium_portrait/6/17013.jpg",
+    "url": "http://www.tvmaze.com/shows/1058/the-a-team",
+  },
+]
+`;
